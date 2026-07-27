@@ -3,7 +3,6 @@
 > **Live Basketball Player Props Pricing Engine & +EV Execution Bot**
 
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https.python.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Framework](https://img.shields.io/badge/AsyncIO-FastAPI%20%7C%20Streamlit-orange)](https://streamlit.io)
 [![Database](https://img.shields.io/badge/Storage-TimescaleDB%20%7C%20Redis-red)](https://www.timescale.com)
 
@@ -164,9 +163,3 @@ $$W = \min\left( 0.125 \times \frac{EV}{O_{\text{book}} - 1} \times \text{Bankro
 ## 📄 System Documentation
 
 For full mathematical proofs, database schema details, Shin's insider trading model derivations, and architectural deep-dives, see **[SYSTEM_DOCUMENTATION.md](SYSTEM_DOCUMENTATION.md)**.
-
----
-
-## ⚖️ License
-
-Distributed under the MIT License. See `LICENSE` for details.
