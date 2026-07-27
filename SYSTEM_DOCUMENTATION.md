@@ -144,23 +144,17 @@ $$p_1 = \frac{\sqrt{z^2 + 4(1-z) \frac{(p_1')^2}{S}} - z}{2(1-z)}$$
 
 ---
 
-### 4.3 Expected Value (+EV) & Kelly Risk Management
+### 4.3 Trade Signal Execution Thresholds
 
-#### Expected Value (+EV) Calculation
-Given model true probability $P_{win}$ and soft bookmaker decimal odds $O_{book}$:
-$$EV = P_{win} \times (O_{book} - 1) - (1 - P_{win}) = P_{win} \times O_{book} - 1$$
+A quote is flagged as a high-priority **+EV Trade Signal** if and only if it satisfies both criteria:
 
-A trade signal is generated if:
-$$EV \ge \text{MIN\_EV\_THRESHOLD} \quad (3.0\%) \quad \text{AND} \quad (P_{win} - P_{sharp}) \ge 1.5\%$$
+$$EV \ge \text{Min EV Threshold} \quad (3.0\%) \quad \text{AND} \quad (P_{\text{win}} - P_{\text{sharp}}) \ge 1.5\%$$
 
-#### Fractional Kelly Criterion Sizing
-The optimal full Kelly bet fraction $f^*$ is:
-$$f^* = \frac{EV}{O_{book} - 1}$$
+### 4.4 Risk Management & Fractional Kelly Position Sizing
 
-To protect against parameter uncertainty and model variance, we apply **Fractional Kelly Scaling ($\alpha = 0.125$, Quarter-Kelly)**:
-$$f_{fractional} = \alpha \times f^* = 0.125 \times \frac{EV}{O_{book} - 1}$$
+To protect against modeling variance and market shocks, position sizes are capped using Quarter-Kelly ($\alpha = 0.125$) and maximum bankroll percentage bounds:
 
-$$\text{Recommended Wager: } W = \min\left( f_{fractional} \times B, \, \text{Bankroll} \times 2.5\%, \, \text{MAX\_WAGER\_CAP} \right)$$
+$$\text{Recommended Wager: } W = \min\left( f_{\text{fractional}} \times B, \, \text{Bankroll} \times 2.5\%, \, \text{Max Wager Cap} \right)$$
 Where $B$ is active bankroll (e.g., $\$10,000$).
 
 ---

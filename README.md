@@ -157,7 +157,7 @@ $$\lambda_{rem}(t) = \mu_{base} \times R_{proj}(t) \times \gamma_{pace}(t) \time
 $$EV = P_{win} \times (O_{book} - 1) - (1 - P_{win}) = P_{win} \times O_{book} - 1$$
 
 ### 3. Fractional Kelly Stake
-$$W = \min\left( 0.125 \times \frac{EV}{O_{book} - 1} \times \text{Bankroll}, \, 0.025 \times \text{Bankroll}, \, \text{MAX\_WAGER\_CAP} \right)$$
+$$W = \min\left( 0.125 \times \frac{EV}{O_{\text{book}} - 1} \times \text{Bankroll}, \, 0.025 \times \text{Bankroll}, \, \text{Max Wager Cap} \right)$$
 
 ---
 
