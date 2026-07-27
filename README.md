@@ -14,7 +14,7 @@
 ## 🏀 Key Features
 
 - **Strict API Validation**: Only makes external HTTP calls to The-Odds-API when passed verified 32-character hexadecimal event hashes directly returned by live event endpoints.
-- **Pure Live Pipeline**: Operates on 100% real live games and telemetry parsed from ESPN and sports data feeds (zero synthetic/mock fallbacks or fake preset rosters).
+- **Live Data Pipeline**: Ingests real-time game telemetry parsed from ESPN and live sports feeds.
 - **Dynamic Rate Pricing (Inhomogeneous Poisson Process)**: Calculates real-time stat accumulation rates $\lambda_{rem}(t)$ that dynamically decay when players experience foul trouble or when games reach late blowout states.
 - **Advanced De-Juicing (Margin Stripping)**: Extracts true market consensus probabilities from sharp books (Pinnacle/Circa) using:
   - **Multiplicative De-Juicing** (Standard proportional)
@@ -22,7 +22,6 @@
   - **Shin's Method** (Models insider trading & information asymmetry)
 - **+EV Trade Detection**: Scans soft/retail books (DraftKings, FanDuel, BetMGM) for price latency, flagging edges where Expected Value $EV \ge 3\%$ and win probability exceeds sharp consensus by $\ge 1.5\%$.
 - **Fractional Kelly Sizing**: Calculates optimal risk-managed wager sizes using Quarter-Kelly ($\alpha = 0.125$) subject to strict exposure caps.
-- **Minimalist Bloomberg-Style UI**: Streamlit frontend (`src/dashboard.py`) built with a deep navy theme (`#0b1120`), `Inter`/`JetBrains Mono` typography, zero emojis, single-game focus with full-width card select buttons, inline team-grouped checkbox chip roster grids, and team-divided summary tables.
 
 ---
 
