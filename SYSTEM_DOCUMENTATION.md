@@ -76,7 +76,7 @@ How much capital should you allocate to a trade? If you bet too little, your ban
 11. **`src/db/postgres_client.py`**: Async TimescaleDB client inserting tick logs into hypertable partitions.
 12. **`src/db/db_init.py`**: Database initialization utility executing SQL DDL schemas and creating hypertables.
 13. **`src/engine_worker.py`**: Continuous production background daemon orchestrating the end-to-end execution loop.
-14. **`src/dashboard.py`**: Minimalist Bloomberg-terminal styled Streamlit web interface (`#0b1120`, `Inter`/`JetBrains Mono` fonts) for interactive game selection via clickable card tiles, team-grouped checkbox chip grid roster selection, real-time telemetry monitoring, and +EV execution alerts.
+14. **`src/dashboard.py`**: Minimalist Bloomberg-terminal styled Streamlit web interface (`#0b1120`, `Inter`/`JetBrains Mono` fonts) featuring single-game focus via full-width card select buttons, inline team-grouped checkbox chip roster grid directly under the selected game card, real-time telemetry monitoring, team-sorted tables, and +EV execution alerts.
 15. **`run.sh`**: Shell launcher script running the background engine daemon and Streamlit dashboard concurrently.
 
 ---

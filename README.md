@@ -22,7 +22,7 @@
   - **Shin's Method** (Models insider trading & information asymmetry)
 - **+EV Trade Detection**: Scans soft/retail books (DraftKings, FanDuel, BetMGM) for price latency, flagging edges where Expected Value $EV \ge 3\%$ and win probability exceeds sharp consensus by $\ge 1.5\%$.
 - **Fractional Kelly Sizing**: Calculates optimal risk-managed wager sizes using Quarter-Kelly ($\alpha = 0.125$) subject to strict exposure caps.
-- **Minimalist Bloomberg-Style UI**: Streamlit frontend (`src/dashboard.py`) built with a deep navy theme (`#0b1120`), `Inter`/`JetBrains Mono` typography, zero emojis, interactive game selection card tiles with pulsing live badges, and team-grouped checkbox chip grids for instant roster selection.
+- **Minimalist Bloomberg-Style UI**: Streamlit frontend (`src/dashboard.py`) built with a deep navy theme (`#0b1120`), `Inter`/`JetBrains Mono` typography, zero emojis, single-game focus with full-width card select buttons, inline team-grouped checkbox chip roster grids, and team-divided summary tables.
 
 ---
 
