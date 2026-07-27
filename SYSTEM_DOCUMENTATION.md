@@ -148,14 +148,14 @@ $$p_1 = \frac{\sqrt{z^2 + 4(1-z) \frac{(p_1')^2}{S}} - z}{2(1-z)}$$
 
 A quote is flagged as a high-priority **+EV Trade Signal** if and only if it satisfies both criteria:
 
-$$EV \ge \text{Min EV Threshold} \quad (3.0\%) \quad \text{AND} \quad (P_{\text{win}} - P_{\text{sharp}}) \ge 1.5\%$$
+$$EV \ge \text{Min EV Threshold} \quad (0.03) \quad \text{AND} \quad (P_{\text{win}} - P_{\text{sharp}}) \ge 0.015$$
 
 ### 4.4 Risk Management & Fractional Kelly Position Sizing
 
 To protect against modeling variance and market shocks, position sizes are capped using Quarter-Kelly ($\alpha = 0.125$) and maximum bankroll percentage bounds:
 
-$$\text{Recommended Wager: } W = \min\left( f_{\text{fractional}} \times B, \, \text{Bankroll} \times 2.5\%, \, \text{Max Wager Cap} \right)$$
-Where $B$ is active bankroll (e.g., $\$10,000$).
+$$\text{Recommended Wager: } W = \min\left( f_{\text{fractional}} \times B, \quad 0.025 \times \text{Bankroll}, \quad \text{Max Wager Cap} \right)$$
+Where $B$ is active bankroll (e.g., $10,000).
 
 ---
 
