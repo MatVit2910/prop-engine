@@ -1,0 +1,90 @@
+<svg viewBox="0 0 900 520" width="900" height="520" xmlns="http://www.w3.org/2000/svg" style="background-color: #0d1117; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff" />
+    </marker>
+
+    <linearGradient id="feedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f293d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="quantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" fill="#f0f6fc" font-size="18" font-weight="bold" text-anchor="middle">System Component Architecture &amp; Data Pipeline</text>
+
+  <!-- External Data Feeds Box -->
+  <rect x="30" y="60" width="240" height="130" rx="8" fill="url(#feedGrad)" stroke="#30363d" stroke-width="2"/>
+  <text x="150" y="85" fill="#58a6ff" font-size="14" font-weight="bold" text-anchor="middle">External Data Feeds</text>
+  <rect x="45" y="100" width="210" height="35" rx="5" fill="#161b22" stroke="#30363d"/>
+  <text x="150" y="122" fill="#c9d1d9" font-size="11" text-anchor="middle">The-Odds-API (DraftKings, FanDuel, Pinnacle)</text>
+  <rect x="45" y="145" width="210" height="35" rx="5" fill="#161b22" stroke="#30363d"/>
+  <text x="150" y="167" fill="#c9d1d9" font-size="11" text-anchor="middle">NBA CDN / Sportradar Play-by-Play</text>
+
+  <!-- Data Ingestion Workers Box -->
+  <rect x="330" y="60" width="240" height="130" rx="8" fill="url(#feedGrad)" stroke="#30363d" stroke-width="2"/>
+  <text x="450" y="85" fill="#58a6ff" font-size="14" font-weight="bold" text-anchor="middle">Async Ingestion Layer</text>
+  <rect x="345" y="100" width="210" height="35" rx="5" fill="#161b22" stroke="#30363d"/>
+  <text x="450" y="122" fill="#7ee787" font-size="12" font-weight="bold" text-anchor="middle">OddsIngestor Module</text>
+  <rect x="345" y="145" width="210" height="35" rx="5" fill="#161b22" stroke="#30363d"/>
+  <text x="450" y="167" fill="#7ee787" font-size="12" font-weight="bold" text-anchor="middle">GamestateIngestor Module</text>
+
+  <!-- Redis Message Broker Box -->
+  <rect x="630" y="60" width="240" height="130" rx="8" fill="url(#feedGrad)" stroke="#d97706" stroke-width="2"/>
+  <text x="750" y="85" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle">In-Memory Cache &amp; Broker</text>
+  <rect x="645" y="105" width="210" height="70" rx="5" fill="#161b22" stroke="#d97706"/>
+  <text x="750" y="132" fill="#f59e0b" font-size="13" font-weight="bold" text-anchor="middle">Redis 7 Sub-Second Cache</text>
+  <text x="750" y="152" fill="#9ca3af" font-size="11" text-anchor="middle">Pub/Sub Ticks &amp; Game State</text>
+
+  <!-- Quantitative Engine Core Box -->
+  <rect x="180" y="240" width="540" height="150" rx="8" fill="url(#quantGrad)" stroke="#6366f1" stroke-width="2"/>
+  <text x="450" y="265" fill="#a5b4fc" font-size="15" font-weight="bold" text-anchor="middle">Quantitative Core Pricing &amp; Execution Engine</text>
+  
+  <rect x="200" y="280" width="230" height="40" rx="5" fill="#0f172a" stroke="#6366f1"/>
+  <text x="315" y="305" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">PoissonPricer (True Prob Distribution)</text>
+
+  <rect x="470" y="280" width="230" height="40" rx="5" fill="#0f172a" stroke="#6366f1"/>
+  <text x="585" y="305" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">VigStripper (Shin &amp; Power De-Juicing)</text>
+
+  <rect x="200" y="335" width="230" height="40" rx="5" fill="#0f172a" stroke="#6366f1"/>
+  <text x="315" y="360" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">EVEvaluator (+EV Edge Detection)</text>
+
+  <rect x="470" y="335" width="230" height="40" rx="5" fill="#0f172a" stroke="#6366f1"/>
+  <text x="585" y="360" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="middle">KellyRiskManager (Quarter-Kelly Sizer)</text>
+
+  <!-- Output Layer (Database, Dashboard, Alerting) -->
+  <rect x="30" y="420" width="250" height="75" rx="8" fill="url(#dbGrad)" stroke="#10b981" stroke-width="2"/>
+  <text x="155" y="450" fill="#6ee7b7" font-size="13" font-weight="bold" text-anchor="middle">PostgreSQL + TimescaleDB</text>
+  <text x="155" y="470" fill="#9ca3af" font-size="11" text-anchor="middle">Odds Ticks &amp; Signal Hypertables</text>
+
+  <rect x="325" y="420" width="250" height="75" rx="8" fill="url(#feedGrad)" stroke="#38bdf8" stroke-width="2"/>
+  <text x="450" y="450" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Streamlit Live Dashboard</text>
+  <text x="450" y="470" fill="#9ca3af" font-size="11" text-anchor="middle">Real-time Visual Analytics UI</text>
+
+  <rect x="620" y="420" width="250" height="75" rx="8" fill="url(#alertGrad)" stroke="#f97316" stroke-width="2"/>
+  <text x="745" y="450" fill="#fdba74" font-size="13" font-weight="bold" text-anchor="middle">AlertDispatcher Webhooks</text>
+  <text x="745" y="470" fill="#9ca3af" font-size="11" text-anchor="middle">Discord / Telegram Push Alerts</text>
+
+  <!-- Connectors -->
+  <line x1="270" y1="125" x2="330" y2="125" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="570" y1="125" x2="630" y2="125" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="750" y1="190" x2="750" y2="215" stroke="#58a6ff" stroke-width="2"/>
+  <line x1="750" y1="215" x2="450" y2="215" stroke="#58a6ff" stroke-width="2"/>
+  <line x1="450" y1="215" x2="450" y2="240" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="250" y1="390" x2="155" y2="420" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="390" x2="450" y2="420" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="390" x2="745" y2="420" stroke="#f97316" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

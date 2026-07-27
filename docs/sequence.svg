@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 420" width="900" height="420" xmlns="http://www.w3.org/2000/svg" style="background-color: #0d1117; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58a6ff" />
+    </marker>
+  </defs>
+
+  <!-- Lifeline Columns -->
+  <g fill="#8b949e" font-size="12" font-weight="bold" text-anchor="middle">
+    <text x="70" y="35">1. Feeds</text>
+    <text x="210" y="35">2. Redis</text>
+    <text x="350" y="35">3. Engine Daemon</text>
+    <text x="490" y="35">4. Poisson Pricer</text>
+    <text x="630" y="35">5. De-Juicer</text>
+    <text x="770" y="35">6. EV &amp; Kelly Engine</text>
+  </g>
+
+  <!-- Vertical Lifelines -->
+  <line x1="70" y1="45" x2="70" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="210" y1="45" x2="210" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="350" y1="45" x2="350" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="490" y1="45" x2="490" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="630" y1="45" x2="630" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="770" y1="45" x2="770" y2="390" stroke="#30363d" stroke-dasharray="4,4" stroke-width="2"/>
+
+  <!-- Step 1 -->
+  <line x1="70" y1="75" x2="210" y2="75" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="140" y="68" fill="#58a6ff" font-size="11" text-anchor="middle">1. Stream live odds &amp; play events</text>
+
+  <!-- Step 2 -->
+  <line x1="210" y1="120" x2="350" y2="120" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="280" y="113" fill="#c9d1d9" font-size="11" text-anchor="middle">2. Trigger execution update</text>
+
+  <!-- Step 3 -->
+  <line x1="350" y1="165" x2="490" y2="165" stroke="#7ee787" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="420" y="158" fill="#7ee787" font-size="11" text-anchor="middle">3. Calculate Poisson true prob</text>
+
+  <!-- Step 4 -->
+  <line x1="490" y1="210" x2="350" y2="210" stroke="#7ee787" stroke-dasharray="2,2" stroke-width="2"/>
+  <text x="420" y="203" fill="#9ca3af" font-size="11" text-anchor="middle">4. Return model true odds</text>
+
+  <!-- Step 5 -->
+  <line x1="350" y1="255" x2="630" y2="255" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="248" fill="#f59e0b" font-size="11" text-anchor="middle">5. Strip vig via Shin/Power method</text>
+
+  <!-- Step 6 -->
+  <line x1="630" y1="300" x2="350" y2="300" stroke="#f59e0b" stroke-dasharray="2,2" stroke-width="2"/>
+  <text x="490" y="293" fill="#9ca3af" font-size="11" text-anchor="middle">6. Return sharp consensus fair odds</text>
+
+  <!-- Step 7 -->
+  <line x1="350" y1="345" x2="770" y2="345" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="560" y="338" fill="#f43f5e" font-size="11" text-anchor="middle">7. Evaluate EV &gt; 3.0% and size wager via Kelly</text>
+
+  <!-- Step 8 (Result Box) -->
+  <rect x="660" y="360" width="220" height="25" rx="4" fill="#064e3b" stroke="#10b981"/>
+  <text x="770" y="377" fill="#6ee7b7" font-size="11" font-weight="bold" text-anchor="middle">8. Log to TimescaleDB &amp; Dispatch Alert</text>
+</svg>

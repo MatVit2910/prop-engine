@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: nba-props-engine
+Version: 0.1.0
+Summary: Live NBA Player Props Pricing Engine & +EV Betting Bot
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: asyncio
+Requires-Dist: aiohttp>=3.9.0
+Requires-Dist: websockets>=12.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pydantic-settings>=2.1.0
+Requires-Dist: redis>=5.0.0
+Requires-Dist: asyncpg>=0.29.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: scipy>=1.12.0
+Requires-Dist: structlog>=24.1.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: streamlit>=1.31.0
+Requires-Dist: fastapi>=0.109.0
+Requires-Dist: uvicorn>=0.27.0
