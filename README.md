@@ -52,13 +52,13 @@ graph TD
 ```
 
 ### Sequence Flow
-1. **Telemetry Feed**: [gamestate_ingestor.py](file:///home/mateo/prop-engine/src/ingestion/gamestate_ingestor.py) tracks game clock, period, fouls, and stat accumulation.
-2. **Quote Feed**: [odds_ingestor.py](file:///home/mateo/prop-engine/src/ingestion/odds_ingestor.py) fetches real-time quotes across bookmakers.
-3. **De-Juicing**: [vig_stripper.py](file:///home/mateo/prop-engine/src/pricing/vig_stripper.py) strips vig from sharp sportsbooks.
-4. **Quant Pricing**: [poisson_pricer.py](file:///home/mateo/prop-engine/src/pricing/poisson_pricer.py) computes dynamic Over/Under probabilities.
-5. **Arbitrage Check**: [ev_evaluator.py](file:///home/mateo/prop-engine/src/execution/ev_evaluator.py) flags soft book latency.
-6. **Risk Management**: [kelly_sizer.py](file:///home/mateo/prop-engine/src/execution/kelly_sizer.py) computes bankroll wager stakes.
-7. **Storage & UI**: [postgres_client.py](file:///home/mateo/prop-engine/src/db/postgres_client.py) logs to TimescaleDB, rendering via [dashboard.py](file:///home/mateo/prop-engine/src/dashboard.py).
+1. **Telemetry Feed**: [`gamestate_ingestor.py`](src/ingestion/gamestate_ingestor.py) tracks game clock, period, fouls, and stat accumulation.
+2. **Quote Feed**: [`odds_ingestor.py`](src/ingestion/odds_ingestor.py) fetches real-time quotes across bookmakers.
+3. **De-Juicing**: [`vig_stripper.py`](src/pricing/vig_stripper.py) strips vig from sharp sportsbooks.
+4. **Quant Pricing**: [`poisson_pricer.py`](src/pricing/poisson_pricer.py) computes dynamic Over/Under probabilities.
+5. **Arbitrage Check**: [`ev_evaluator.py`](src/execution/ev_evaluator.py) flags soft book latency.
+6. **Risk Management**: [`kelly_sizer.py`](src/execution/kelly_sizer.py) computes bankroll wager stakes.
+7. **Storage & UI**: [`postgres_client.py`](src/db/postgres_client.py) logs to TimescaleDB, rendering via [`dashboard.py`](src/dashboard.py).
 
 ---
 
@@ -163,7 +163,7 @@ $$W = \min\left( 0.125 \times \frac{EV}{O_{\text{book}} - 1} \times \text{Bankro
 
 ## 📄 System Documentation
 
-For full mathematical proofs, database schema details, Shin's insider trading model derivations, and architectural deep-dives, see **[SYSTEM_DOCUMENTATION.md](file:///home/mateo/prop-engine/SYSTEM_DOCUMENTATION.md)**.
+For full mathematical proofs, database schema details, Shin's insider trading model derivations, and architectural deep-dives, see **[SYSTEM_DOCUMENTATION.md](SYSTEM_DOCUMENTATION.md)**.
 
 ---
 
